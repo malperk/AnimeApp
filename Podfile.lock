@@ -1,0 +1,52 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Moya/Core (9.0.0):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (9.0.0):
+    - Moya/Core
+    - RxSwift (= 4.0.0-beta.0)
+  - Pageboy (2.0.0)
+  - PureLayout (3.0.2)
+  - Result (3.2.4)
+  - RxCocoa (4.0.0-beta.0):
+    - RxSwift (~> 4.0.0-beta.0)
+  - RxSwift (4.0.0-beta.0)
+  - Tabman (1.0.2):
+    - Pageboy (~> 2.0.0)
+    - PureLayout (~> 3.0.0)
+
+DEPENDENCIES:
+  - Moya/RxSwift (from `https://github.com/Moya/Moya.git`, branch `10.0.0-dev`)
+  - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`, tag `4.0.0-beta.0`)
+  - Tabman (~> 1.0)
+
+EXTERNAL SOURCES:
+  Moya:
+    :branch: 10.0.0-dev
+    :git: https://github.com/Moya/Moya.git
+  RxCocoa:
+    :git: https://github.com/ReactiveX/RxSwift.git
+    :tag: 4.0.0-beta.0
+
+CHECKOUT OPTIONS:
+  Moya:
+    :commit: 059979cd4c4bc8035468b6f5e5282d307b733a9a
+    :git: https://github.com/Moya/Moya.git
+  RxCocoa:
+    :git: https://github.com/ReactiveX/RxSwift.git
+    :tag: 4.0.0-beta.0
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Moya: 43aa124994d3f6eb663e15436a9e909b39cc62cb
+  Pageboy: a43a4e34fad98ebfa415a5d33cd0389e5005a101
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: f2dff5e6b6a40f842867ec5915f449e1c3af563a
+  RxSwift: e0899fae37065c16db976cc5e3c957e4e388869c
+  Tabman: 558bede024627206c554e1c8cee728d380655ebf
+
+PODFILE CHECKSUM: 31e451a2fb0fbfc9ab58cacbfca398275deaab9e
+
+COCOAPODS: 1.4.0.beta.1

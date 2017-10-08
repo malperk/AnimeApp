@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import RxSwift
+import RxCocoa
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,10 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let mainView = VCMain()
+        let mainView = VCFilms()
         let nav = UINavigationController(rootViewController: mainView)
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
+//        let tr = UITableView()
+//        let db = DisposeBag()
+//        let data = Observable<[String]>.just(["first element", "second element", "third element"])
+//
+//        data.bind(to: tr.rx.items(cellIdentifier: "Cell")) { index, model, cell in
+//            cell.textLabel?.text = model
+//            }
+//            .disposed(by: db)
         return true
     }
 
