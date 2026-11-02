@@ -76,12 +76,12 @@ class VCFilms: VCBase {
     private func bindFilms() {
         viewModel.data
             .asObservable()
-            .catchErrorJustReturn([])
-            .observeOn(MainScheduler.instance)
+            .catchAndReturn([])
+            .observe(on: MainScheduler.instance)
             .bind(to: collectionView.rx.items(cellIdentifier: "FilmCell", cellType: VFilmsCell.self)) {
                 _, film, cell in
                 cell.configure(with: film)
             }
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
 }
