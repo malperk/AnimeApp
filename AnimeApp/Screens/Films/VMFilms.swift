@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxMoya
 
 class VMFilms {
     private let disposeBag = DisposeBag()

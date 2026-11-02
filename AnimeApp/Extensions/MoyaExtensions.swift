@@ -6,6 +6,7 @@
 //  Copyright © 2017 Alper KARATAŞ. All rights reserved.
 //
 
+import Foundation
 import Moya
 
 public extension Response {
