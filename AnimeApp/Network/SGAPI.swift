@@ -18,46 +18,45 @@ public enum StudioGhibli {
 }
 
 extension StudioGhibli: TargetType {
-    public var baseURL: URL { return URL(string: "https://ghibliapi.herokuapp.com")! }
-    
+    public var baseURL: URL {
+        return URL(string: "https://ghibliapi.vercel.app")!
+    }
+
     public var path: String {
         switch self {
         case .films(let id):
-            var url = "/films"
-            if let filmId = id { url += filmId }
-            return url
+            return resourcePath("films", id: id)
         case .people(let id):
-            var url = "/films"
-            if let peopleId = id { url += peopleId }
-            return url
+            return resourcePath("people", id: id)
         case .locations(let id):
-            var url = "/locations"
-            if let locationsId = id { url += locationsId }
-            return url
+            return resourcePath("locations", id: id)
         case .species(let id):
-            var url = "/films"
-            if let speciesId = id { url += speciesId }
-            return url
+            return resourcePath("species", id: id)
         case .vehicles(let id):
-            var url = "/films"
-            if let vehiclesId = id { url += vehiclesId }
-            return url
+            return resourcePath("vehicles", id: id)
         }
     }
-    
+
+    private func resourcePath(_ resource: String, id: String?) -> String {
+        guard let id = id, !id.isEmpty else {
+            return "/\(resource)"
+        }
+        return "/\(resource)/\(id)"
+    }
+
     public var method: Moya.Method {
         return .get
     }
-    
+
     public var sampleData: Data {
         return Data()
     }
-    
+
     public var task: Task {
         return .requestPlain
     }
-    
+
     public var headers: [String: String]? {
-        return ["Content-type": "application/json"]
+        return ["Content-Type": "application/json"]
     }
 }
